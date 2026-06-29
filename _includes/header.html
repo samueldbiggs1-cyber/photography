@@ -13,6 +13,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic">
 
+****
+
+<style>
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 12px 18px;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+}
+
+.site-header .title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.site-header button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+</style>
+
+<div class="site-header">
+  <div class="title">Photography by Sam Biggs</div>
+  <button onclick="openPanel()">Services</button>
+</div>
+
+***
+
 {% if site.google_analytics %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
