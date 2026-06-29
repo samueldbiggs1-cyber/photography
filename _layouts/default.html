@@ -3,6 +3,59 @@
 <head>
     {% include header.html %}
 </head>
+
+<!-- SAM EDIT: added services header -->
+
+<div id="servicePanel" class="service-panel">
+  <div class="service-inner">
+    <span onclick="closePanel()" style="cursor:pointer;font-size:24px;">×</span>
+
+    <h2>Photography Services</h2>
+
+    <p>
+      I am a photographer based in Derry available for all types of shoots including weddings,
+      property photography, headshots, events, and personal projects.
+    </p>
+
+    <p><strong>£20 per hour</strong></p>
+
+    <p>
+      Equipment options:<br>
+      • Canon EOS 80D (DSLR)<br>
+      • GoPro Hero 12 (wide/action shots)<br>
+      • Xiaomi Redmi Note (200MP mobile photography)
+    </p>
+  </div>
+</div>
+
+<script>
+function openPanel() {
+  document.getElementById("servicePanel").style.right = "0";
+}
+
+function closePanel() {
+  document.getElementById("servicePanel").style.right = "-400px";
+}
+</script>
+
+<style>
+.service-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 360px;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  color: white;
+  padding: 20px;
+  transition: 0.3s ease;
+  z-index: 10000;
+}
+</style>
+
+<!-- SAM EDIT: added services header -->
+
+    
 <body class="is-preload">
 
     {{ content }}
